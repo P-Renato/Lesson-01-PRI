@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+</head>
+<style>
+    #target {
+        margin: 1em;
+        padding: 1em;
+        background-color: lightpink;
+    }
+
+    div>div {
+        margin: .5em 0;
+        padding: 1em;
+        background: #ffffff65;
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+<body>
+    <div  id="target"></div>
+
+    <script type="module">
+        import TodoList from "./TodoList.js";
+
+        const root = document.querySelector('#target');
+        const list = new TodoList(root);
+
+        list.add('initial todo');
+    </script>
+</body>
+</html>
